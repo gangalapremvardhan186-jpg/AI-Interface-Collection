@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Response Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>AI Response</h1>
+
+    <div class="response-card">
+
+        <div class="card-header">
+
+            <div class="ai-title">
+                <div class="ai-icon">✦</div>
+
+                <div>
+                    <h3>AI Assistant</h3>
+                    <span>Generated response</span>
+                </div>
+            </div>
+
+            <button onclick="copyResponse()">⋮</button>
+
+        </div>
+
+        <div class="response-content" id="response">
+
+            <p>
+                Artificial intelligence interfaces are becoming an important
+                part of modern web applications. They allow users to interact
+                with software using natural language instead of traditional
+                menus and controls.
+            </p>
+
+            <p>
+                Modern AI interfaces commonly include conversational input,
+                contextual suggestions, generated responses, and interactive
+                actions.
+            </p>
+
+        </div>
+
+        <div class="actions">
+
+            <button onclick="copyResponse()">📋 Copy</button>
+
+            <button onclick="regenerate()">↻ Regenerate</button>
+
+            <button onclick="feedback('Helpful')">👍</button>
+
+            <button onclick="feedback('Not helpful')">👎</button>
+
+        </div>
+
+        <div class="feedback" id="feedback"></div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

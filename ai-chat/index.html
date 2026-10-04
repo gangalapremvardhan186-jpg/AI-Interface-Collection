@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+        <button class="new-chat" onclick="newChat()">+ New Chat</button>
+
+        <h3>Recent Chats</h3>
+
+        <div class="chat-item active">AI Interface Ideas</div>
+        <div class="chat-item">Website Design</div>
+        <div class="chat-item">JavaScript Help</div>
+        <div class="chat-item">Project Planning</div>
+
+        <div class="sidebar-bottom">
+            <div>⚙ Settings</div>
+            <div>👤 Profile</div>
+        </div>
+    </aside>
+
+    <main class="chat-area">
+
+        <header class="chat-header">
+            <div>
+                <h2>AI Assistant</h2>
+                <span class="online">● Online</span>
+            </div>
+            <button>⋮</button>
+        </header>
+
+        <section class="messages" id="messages">
+
+            <div class="message ai">
+                <div class="avatar">AI</div>
+                <div class="bubble">
+                    Hello! 👋 I'm your AI assistant. How can I help you today?
+                </div>
+            </div>
+
+            <div class="message user">
+                <div class="bubble">
+                    Give me some ideas for a modern AI interface.
+                </div>
+            </div>
+
+            <div class="message ai">
+                <div class="avatar">AI</div>
+                <div class="bubble">
+                    You could build an AI dashboard, AI search interface,
+                    AI copilot, or an AI command center.
+                </div>
+            </div>
+
+        </section>
+
+        <div class="typing" id="typing">
+            AI is typing...
+        </div>
+
+        <form class="input-area" onsubmit="sendMessage(event)">
+            <button type="button" class="attach">＋</button>
+
+            <input
+                type="text"
+                id="messageInput"
+                placeholder="Message AI..."
+                autocomplete="off"
+            >
+
+            <button type="submit" class="send">➤</button>
+        </form>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

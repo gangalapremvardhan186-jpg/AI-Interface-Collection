@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Sidebar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+
+    <header>
+        <h1>Dashboard</h1>
+        <button onclick="toggleSidebar()">AI Assistant</button>
+    </header>
+
+    <main>
+        <h2>Welcome back 👋</h2>
+        <p>Your dashboard content appears here.</p>
+
+        <div class="cards">
+            <div>Analytics</div>
+            <div>Projects</div>
+            <div>Tasks</div>
+        </div>
+    </main>
+
+</div>
+
+<aside class="ai-sidebar" id="aiSidebar">
+
+    <div class="sidebar-header">
+        <div>
+            <strong>AI Assistant</strong>
+            <small>Ready to help</small>
+        </div>
+
+        <button onclick="toggleSidebar()">×</button>
+    </div>
+
+    <div class="assistant-content" id="assistantContent">
+
+        <div class="ai-message">
+            Hi! I'm your AI assistant. What would you like to do?
+        </div>
+
+        <button onclick="suggest('Summarize my dashboard')">
+            Summarize dashboard
+        </button>
+
+        <button onclick="suggest('Give me project insights')">
+            Project insights
+        </button>
+
+        <button onclick="suggest('Help me plan my tasks')">
+            Plan my tasks
+        </button>
+
+    </div>
+
+    <form class="assistant-input" onsubmit="sendPrompt(event)">
+        <input id="prompt" placeholder="Ask AI..." required>
+        <button>➤</button>
+    </form>
+
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>

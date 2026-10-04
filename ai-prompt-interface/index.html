@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <div class="logo">✦ PromptAI</div>
+        <button>History</button>
+    </header>
+
+    <section class="hero">
+        <h1>What do you want AI to create?</h1>
+        <p>Write a prompt and let AI help you turn your ideas into reality.</p>
+    </section>
+
+    <section class="prompt-box">
+
+        <textarea
+            id="prompt"
+            maxlength="500"
+            placeholder="Describe what you want AI to create..."
+            oninput="updateCount()"
+        ></textarea>
+
+        <div class="prompt-footer">
+            <span id="count">0 / 500</span>
+
+            <button onclick="generate()">
+                ✨ Generate
+            </button>
+        </div>
+
+    </section>
+
+    <section class="suggestions">
+
+        <h3>Try a prompt</h3>
+
+        <div class="suggestion-grid">
+
+            <button onclick="usePrompt('Create a modern portfolio website')">
+                💻 Create a portfolio
+            </button>
+
+            <button onclick="usePrompt('Explain artificial intelligence simply')">
+                🧠 Explain AI
+            </button>
+
+            <button onclick="usePrompt('Generate a product description')">
+                ✍️ Write content
+            </button>
+
+            <button onclick="usePrompt('Create a study plan for programming')">
+                📚 Create a study plan
+            </button>
+
+        </div>
+
+    </section>
+
+    <div id="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
